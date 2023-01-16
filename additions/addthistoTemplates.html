@@ -1,0 +1,18 @@
+<script>
+  function sendFeedback(ev, ans, c) {
+    var url = '/microsurveys/SubAns';
+    var data = {
+      'ev': ev,
+      'ans': ans,
+    }
+    $.ajax({
+      type: 'GET',
+      url: url,
+      data: data,
+      success: function(data) {
+        console.log(data);
+        $('#mic0').html(data);
+      },
+    });
+  }
+</script>

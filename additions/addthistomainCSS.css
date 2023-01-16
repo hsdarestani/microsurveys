@@ -1,0 +1,41 @@
+.micsurv{
+  display: none;
+    position: fixed;
+    left: 0;
+    z-index: 1212121;
+    bottom: 20px;
+    background: white;
+    box-shadow: 3px 3px 3px rgb(0 0 0 / 30%);
+    padding: 16px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+.micsurv input{
+  display: none;
+}
+.micsurv .ch{
+  display: flex;
+  justify-content: space-around;
+  font-size: large;
+  text-shadow: 3px 3px 3px rgb(0 0 0 / 30%);
+}
+.micsurv .ch label:hover{
+  text-shadow: 3px 3px 3px rgb(0 0 0 / 70%);
+}
+.micsurv .ch input[type="radio"]:checked+label{
+  text-shadow: 3px 3px 3px rgb(0 0 0 / 70%);
+  font-size: x-large;
+}
+.micclose {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.micclose:hover,
+.micclose:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
