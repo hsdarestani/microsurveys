@@ -11,7 +11,7 @@
         html = html.replace("%question%",str(e.question.Title))
         ansHtml=""
         ansemojies = ["😑","🙂","😊","😍"]
-        for a in range(MaxAns-MinAns):
+        for a in range(MinAns,MaxAns+1):
             ansHtml+='<input  type="radio" id="a'+str(a)+'" name="'+str(e.id)+'" value="'+str(a)+'" onclick="sendFeedback('+str(e.id)+','+str(a)+','+str(evcounter)+')"/><label  for="a'+str(a)+'">'+ansemojies[a]+'</label>'
         html = html.replace("%choices%",ansHtml)
         scr = "<script> span"+str(evcounter)+"=document.getElementsByClassName('micclose')["+str(evcounter)+"]; span"+str(evcounter)+".onclick = function() {document.getElementById('mic"+str(evcounter)+"').style.display = 'none';};setTimeout(function() {document.getElementById('mic"+str(evcounter)+"').style.display='block';}, "+str(delay)+");</script>"
